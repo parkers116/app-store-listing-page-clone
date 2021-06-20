@@ -1,0 +1,68 @@
+.recomendation {
+  padding: 20px 10px;
+  border-bottom: 1px solid #d2d2d7;
+
+  .title {
+    padding-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .horizontal-list {
+    display: flex;
+    overflow-x: scroll;
+    height: 151.2px;
+
+    .list-item {
+      padding-right: 20px;
+      animation: animation-recomended-list 0.3s linear;
+
+      img {
+        width: 80px;
+        border-radius: 10px;
+      }
+
+      .name {
+        max-width: 80px;
+        text-align: left;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+
+      .genre {
+        max-width: 80px;
+        text-align: left;
+        font-size: 14px;
+        color: grey;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .load-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 151.2px;
+    font-size: 40px;
+  }
+
+  @keyframes animation-recomended-list {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
